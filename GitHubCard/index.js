@@ -51,7 +51,9 @@ const followersArray = [
   'gsauce7',
   'emilyseibert',
   'dustinmyers',
-  'justsml'
+  'justsml',
+  'tetondan',
+  'charisearter'
 ];
 
 const cards = document.querySelector('.cards')
@@ -128,11 +130,11 @@ function gitCardMaker(data) {
   gitAddress.href = `${html_url}`
   profile.appendChild(gitAddress)
 
-  const followerss = document.createElement('p')
-  followerss.textContent = `Users Followers Count ${followers}`
+  const userFollowers = document.createElement('p')
+  userFollowers.textContent = `Users Followers Count ${followers}`
 
-  const followeringg = document.createElement('p')
-  followeringg.textContent = `Users Following Count ${following}`
+  const userFollowing = document.createElement('p')
+  userFollowing.textContent = `Users Following Count ${following}`
 
   const bios = document.createElement('p')
   bios.textContent = `Users Bio: ${bio}`
@@ -143,8 +145,8 @@ function gitCardMaker(data) {
   cardInfo.appendChild(logins)
   cardInfo.appendChild(locations)
   cardInfo.appendChild(profile)
-  cardInfo.appendChild(followerss)
-  cardInfo.appendChild(followeringg)
+  cardInfo.appendChild(userFollowers)
+  cardInfo.appendChild(userFollowing)
   cardInfo.appendChild(bios)
 
   return card;
