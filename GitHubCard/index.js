@@ -100,7 +100,7 @@ followersArray.forEach( element => {
 function gitCardMaker(data) {
 
   let {login, name, location, html_url, avatar_url, followers, following, bio} = data
-
+// create the card variable which will be returned
   const card = document.createElement('div')
   card.classList.add('card')
 
@@ -131,13 +131,13 @@ function gitCardMaker(data) {
   profile.appendChild(gitAddress)
 
   const userFollowers = document.createElement('p')
-  userFollowers.textContent = `Users Followers Count ${followers}`
+  userFollowers.textContent = `User Followers - Count: ${followers}`
 
   const userFollowing = document.createElement('p')
-  userFollowing.textContent = `Users Following Count ${following}`
+  userFollowing.textContent = `User Following - Count: ${following}`
 
   const bios = document.createElement('p')
-  bios.textContent = `Users Bio: ${bio}`
+  bios.textContent = `User Bio: ${bio}`
 
   card.appendChild(image)
   card.appendChild(cardInfo)
